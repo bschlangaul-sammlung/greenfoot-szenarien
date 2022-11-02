@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/*.class": true,
+    "**/*.log": true,
+    "**/*.ctxt": true,
+    "**/.mtj.tmp/": true,
+    "**/*.jar": true,
+    "**/*.war": true,
+    "**/*.nar": true,
+    "**/*.ear": true,
+    "**/*.zip": true,
+    "**/*.tar.gz": true,
+    "**/*.rar": true,
+    "**/hs_err_pid*": true,
+    "**/Thumbs.db": true,
+    "**/*.java~": true
+  }
+}
