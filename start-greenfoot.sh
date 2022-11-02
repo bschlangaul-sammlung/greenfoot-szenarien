@@ -1,12 +1,9 @@
-# greenfoot-scenarios
-Sammlung von einigen Greenfoot Szenarien (https:\
-//www.greenfoot.org/scenarios)
-
+#! /bin/sh
 /usr/share/greenfoot/jdk/bin/java --module-path=/usr/share/greenfoot/javafx/lib \
 --add-modules=javafx.controls,javafx.fxml -Djava.library.path=/usr/share/greenfoot/javafx/lib \
 -javaagent:/opt/intellij-idea-community/lib/idea_rt.jar=34421:/opt/intellij-idea-community/bin \
 -Dfile.encoding=UTF-8 \
--classpath /home/hb/IdeaProjects/greenfoot/out/production/greenfoot:\
+-classpath /home/hb/repos/bschlangaul/greenfoot_szenarien/target/classes/org/bschlangaul/greenfootscenarios/tetris/dibo:\
 /usr/share/greenfoot/stylesheets:\
 /home/hb/Downloads/greenfoot-sources-combined/threadchecker.jar:\
 /usr/share/greenfoot/javafx/lib/src.zip:\
