@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.firedark60;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * A class to hold all the shapes

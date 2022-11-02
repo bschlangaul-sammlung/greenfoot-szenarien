@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.dibo;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*;
 
 /**
  * The world of tetris

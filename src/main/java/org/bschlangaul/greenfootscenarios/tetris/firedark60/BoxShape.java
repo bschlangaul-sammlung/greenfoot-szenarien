@@ -1,13 +1,10 @@
 package org.bschlangaul.greenfootscenarios.tetris.firedark60;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 
 /**
  * Write a description of class BoxShape here.
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class BoxShape extends Shapes
 {

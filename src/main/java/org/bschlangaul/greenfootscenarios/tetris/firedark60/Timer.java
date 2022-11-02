@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.firedark60;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*;
 
 /**
  * Counter that displays a number.

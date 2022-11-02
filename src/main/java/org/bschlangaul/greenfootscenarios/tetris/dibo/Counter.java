@@ -1,8 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.dibo;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
-
-import java.awt.Graphics;
+import greenfoot.*;
 
 /**
  * Counter that displays a number with a text prefix.

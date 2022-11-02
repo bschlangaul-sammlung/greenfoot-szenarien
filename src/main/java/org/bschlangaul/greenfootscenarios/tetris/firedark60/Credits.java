@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.firedark60;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * This class holds the picture of the Credit

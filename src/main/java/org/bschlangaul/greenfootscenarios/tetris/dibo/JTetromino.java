@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.dibo;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*;
 
 /**
  * represents a J tetromino

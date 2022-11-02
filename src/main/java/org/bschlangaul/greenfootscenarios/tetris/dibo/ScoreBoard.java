@@ -1,8 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.dibo;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
-
-import java.util.Calendar;
+import greenfoot.*;
 
 /**
  * The ScoreBoard is used to display results on the screen. It can display some text and several

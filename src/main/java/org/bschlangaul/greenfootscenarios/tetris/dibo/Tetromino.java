@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.dibo;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
+import greenfoot.*;
 
 /**
  * abstract super class of all tetrominos; contains the act-method

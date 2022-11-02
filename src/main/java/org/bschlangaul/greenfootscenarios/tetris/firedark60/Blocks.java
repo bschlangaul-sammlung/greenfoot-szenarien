@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.tetris.firedark60;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * The Blocks Used in the game
