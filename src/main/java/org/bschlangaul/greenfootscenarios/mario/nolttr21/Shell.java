@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; 
+import greenfoot.*;
 
 /**
  * A shell that will bounce around and attempt to kill mario

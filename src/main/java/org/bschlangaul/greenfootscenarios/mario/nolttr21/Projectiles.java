@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; 
+import greenfoot.*;
 
 /**
  * Things that enemies shoot at mario to kill him dead

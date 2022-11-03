@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; 
+import greenfoot.*;
 
 /**
  * This will shoot cannonballs at mario and is not destroyable

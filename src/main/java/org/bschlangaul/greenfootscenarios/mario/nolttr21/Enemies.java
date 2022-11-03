@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; 
+import greenfoot.*;
 
 /**
  * All of the bad actors against mario

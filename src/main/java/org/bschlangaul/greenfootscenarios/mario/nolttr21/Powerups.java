@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; 
+import greenfoot.*;
 
 /**
  * Items for mario to pick up to help him along the way

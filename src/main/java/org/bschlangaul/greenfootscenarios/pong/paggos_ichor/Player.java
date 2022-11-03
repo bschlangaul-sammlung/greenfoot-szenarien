@@ -1,5 +1,6 @@
 package org.bschlangaul.greenfootscenarios.pong.paggos_ichor;
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Player here.
@@ -7,20 +8,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Player  extends Actor
+public class Player extends Actor
 {
     /**
-     * Act - do whatever the Player wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the Player wants to do. This method is called whenever the 'Act' or 'Run'
+     * button gets pressed in the environment.
      */
-    public Player(){
+    public Player()
+    {
 
     }
+
     public void act()
     {
-        if(Greenfoot.mouseMoved(null)){
+        if (Greenfoot.mouseMoved(null))
+        {
             MouseInfo mouse = Greenfoot.getMouseInfo();
-            setLocation(getX(),mouse.getY());
+            setLocation(getX(), mouse.getY());
         }
 
     }
