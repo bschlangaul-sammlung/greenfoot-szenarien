@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
 /**
  * A class to create your world
@@ -8,7 +8,6 @@ import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * in the next line insert what would theme you would like this level to be (insert here) Grass,
  * Desert, Ice,Water, Forest, Cliff, Sky, Dark(lava)
  *
- * @author (your name) I will put you in the credits
  * @version (1)
  */
 public class Airship extends SWorld

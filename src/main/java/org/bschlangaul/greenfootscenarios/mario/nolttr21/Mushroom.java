@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
 /**
  * A powerup that, when collected, will turn small mario into big mario. If mario is already big

@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
 /**
  * A bullet that marioG shoots at enemies to kill them.

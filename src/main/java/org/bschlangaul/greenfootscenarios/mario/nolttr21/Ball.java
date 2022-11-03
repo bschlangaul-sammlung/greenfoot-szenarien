@@ -1,12 +1,10 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
 /**
  * helps move the airship
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class Ball extends Actor
 {

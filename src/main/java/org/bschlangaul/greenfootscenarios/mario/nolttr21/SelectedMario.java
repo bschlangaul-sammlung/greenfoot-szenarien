@@ -1,12 +1,10 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
 /**
  * On the Main menu, allows you to select mario as your character
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class SelectedMario extends Characters
 {

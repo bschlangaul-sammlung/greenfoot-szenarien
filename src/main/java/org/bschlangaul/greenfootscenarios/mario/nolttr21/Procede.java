@@ -1,12 +1,10 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
 /**
  * Write a description of class Procede here.
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class Procede extends Text
 {
