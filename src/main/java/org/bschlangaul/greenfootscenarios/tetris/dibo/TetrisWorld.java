@@ -17,7 +17,7 @@ public class TetrisWorld extends World
 
     private Tetromino currentTetromino;
 
-    private int numberOfTetrominos;
+    public int numberOfTetrominos;
 
     private int speed;
 

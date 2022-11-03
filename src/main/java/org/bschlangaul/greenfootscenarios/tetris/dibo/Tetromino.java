@@ -141,7 +141,7 @@ public abstract class Tetromino extends Actor
         TetrisWorld world = TetrisWorld.getWorld();
         blocks: for (int i = 0; i < 4; i++)
         {
-            java.util.List list = world.getObjectsAt(b[i].getX() - 1, b[i].getY(), Block.class);
+            java.util.List<Block> list = world.getObjectsAt(b[i].getX() - 1, b[i].getY(), Block.class);
             if (list.size() == 0)
             {
                 continue;
@@ -182,7 +182,7 @@ public abstract class Tetromino extends Actor
         TetrisWorld world = TetrisWorld.getWorld();
         blocks: for (int i = 0; i < 4; i++)
         {
-            java.util.List list = world.getObjectsAt(b[i].getX() + 1, b[i].getY(), Block.class);
+            java.util.List<Block> list = world.getObjectsAt(b[i].getX() + 1, b[i].getY(), Block.class);
             if (list.size() == 0)
             {
                 continue;
@@ -214,7 +214,7 @@ public abstract class Tetromino extends Actor
         TetrisWorld world = TetrisWorld.getWorld();
         for (int i = 0; i < 4; i++)
         {
-            java.util.List list = world.getObjectsAt(b[i].getX(), b[i].getY(), null);
+            java.util.List<Block> list = world.getObjectsAt(b[i].getX(), b[i].getY(), null);
             if (list.size() > 1)
             {
                 direction = oldDir;
@@ -257,7 +257,7 @@ public abstract class Tetromino extends Actor
     boolean blockFree(int index)
     {
         TetrisWorld world = TetrisWorld.getWorld();
-        java.util.List list = world.getObjectsAt(b[index].getX(), b[index].getY() + 1, null);
+        java.util.List<Block> list = world.getObjectsAt(b[index].getX(), b[index].getY() + 1, null);
         if (list.size() == 0)
         {
             return true;
@@ -281,9 +281,9 @@ public abstract class Tetromino extends Actor
         TetrisWorld world = TetrisWorld.getWorld();
         rows: for (int r = world.getHeight() - 3; r >= 0; r--)
         {
-            cols: for (int c = 0; c < world.getWidth(); c++)
+            for (int c = 0; c < world.getWidth(); c++)
             {
-                java.util.List blocks = world.getObjectsAt(c, r, Block.class);
+                java.util.List<Block> blocks = world.getObjectsAt(c, r, Block.class);
                 if (blocks.size() == 0)
                 {
                     continue rows; // next row
@@ -319,7 +319,7 @@ public abstract class Tetromino extends Actor
         {
             for (int c = 0; c < world.getWidth(); c++)
             {
-                java.util.List blocks = world.getObjectsAt(c, r, Block.class);
+                java.util.List<Block> blocks = world.getObjectsAt(c, r, Block.class);
                 if (blocks.size() > 0)
                 {
                     Block block = (Block) blocks.get(0);
@@ -354,7 +354,7 @@ public abstract class Tetromino extends Actor
         TetrisWorld world = TetrisWorld.getWorld();
         for (int i = 0; i < 4; i++)
         {
-            java.util.List list =
+            java.util.List<Block> list =
                             world.getObjectsAt(tetro.b[i].getX(), tetro.b[i].getY(), Block.class);
             if (list.size() > 1)
             {

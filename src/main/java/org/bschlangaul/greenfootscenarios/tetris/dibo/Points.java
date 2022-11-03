@@ -9,7 +9,7 @@ package org.bschlangaul.greenfootscenarios.tetris.dibo;
 public class Points
 {
 
-    private int points;
+    public int points;
     Counter counter;
 
     Points()
