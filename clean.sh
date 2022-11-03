@@ -18,7 +18,6 @@ _clean_file() {
   sed -i '/@version (a version number or a date)/d' "$1"
 }
 
-
 for FILE in $(find ${FOLDER} -iname "*.java"); do
   echo "Clean $FILE"
   _clean_file "$FILE"

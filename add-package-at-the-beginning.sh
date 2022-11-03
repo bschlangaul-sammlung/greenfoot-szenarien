@@ -4,7 +4,6 @@ FOLDER="$1"
 PACKAGE_SUBFOLDER="$2"
 
 if [ -z "$PACKAGE_SUBFOLDER" ]; then
-
   echo "Usage: $0 <folder> <package>
 
 For example:

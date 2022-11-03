@@ -1,7 +1,7 @@
 # Greenfoot-Szenarien
 
-Sammlung von einigen, ausgewähltenn Greenfoot-Szenarien (https:\
-//www.greenfoot.org/scenarios)
+Sammlung von einigen, ausgewählten Greenfoot-Szenarien (https://www.greenfoot.org/scenarios).
+Vor allem Spieleklassiker finden sich in dieser Sammlung.
 
 Der Code der Szenarien wurde neu formatiert.
 
@@ -14,6 +14,9 @@ mvn formatter:format
 - [Pong](https://de.wikipedia.org/wiki/Pong)
   * [paggos_ichor](https://www.greenfoot.org/scenarios/1493):
     schwarz weiß, mit Maussteuerung
+- [Snake](https://de.wikipedia.org/wiki/Snake_(Computerspiel))
+  * [rccookie](https://www.greenfoot.org/scenarios/24962):
+    minimalistisch, von Student der RWTH Aachen, https://github.com/rc-cookie
 - [Super Mario Bros.](https://de.wikipedia.org/wiki/Super_Mario_Bros.)
   * [nolttr21](https://www.greenfoot.org/scenarios/22540): sehr umfangreich
 - [Tetris](https://de.wikipedia.org/wiki/Tetris)
