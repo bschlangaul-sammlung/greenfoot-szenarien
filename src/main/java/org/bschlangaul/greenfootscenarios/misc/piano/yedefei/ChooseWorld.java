@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class ChooseWorld here.
- *
  */
 public class ChooseWorld extends World
 {

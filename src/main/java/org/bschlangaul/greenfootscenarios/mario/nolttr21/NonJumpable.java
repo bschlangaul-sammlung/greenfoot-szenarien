@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class NonJumpable here.
- *
  */
 public class NonJumpable extends Enemies
 {

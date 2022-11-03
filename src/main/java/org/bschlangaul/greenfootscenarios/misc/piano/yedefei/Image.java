@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Image here.
- *
  */
 public class Image extends Actor
 {

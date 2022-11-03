@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Tells how many lives you have
- *
  */
 public class LiveText extends Text
 {

@@ -2,7 +2,6 @@ package org.bschlangaul.greenfootscenarios.space_invaders.jwilshire;
 
 /**
  * Write a description of class JellyAlien here.
- *
  */
 public class SquidAlien extends Alien
 {

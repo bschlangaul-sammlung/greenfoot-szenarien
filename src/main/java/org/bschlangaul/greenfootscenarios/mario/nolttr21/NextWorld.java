@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class NextWorld here.
- *
  */
 public class NextWorld extends SWorld
 {

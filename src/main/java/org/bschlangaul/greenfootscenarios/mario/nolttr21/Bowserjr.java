@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Bowserjr here.
- *
  */
 public class Bowserjr extends NonJumpable
 {

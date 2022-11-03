@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Key here.
- *
  */
 public class Key extends Items
 {

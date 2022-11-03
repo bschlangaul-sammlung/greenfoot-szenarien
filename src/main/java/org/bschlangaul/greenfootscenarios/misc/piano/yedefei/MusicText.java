@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class MusicText here.
- *
  */
 public class MusicText extends Actor
 {

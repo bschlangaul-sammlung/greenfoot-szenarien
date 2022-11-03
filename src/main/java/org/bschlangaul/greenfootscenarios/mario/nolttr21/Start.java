@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Start here.
- *
  */
 public class Start extends Worlds
 {

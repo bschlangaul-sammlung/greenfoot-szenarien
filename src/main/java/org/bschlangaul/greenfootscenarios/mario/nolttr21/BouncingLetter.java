@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * A BouncingLetter that bounces
- *
  */
 public class BouncingLetter extends Text
 {

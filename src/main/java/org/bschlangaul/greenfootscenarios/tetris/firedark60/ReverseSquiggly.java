@@ -6,7 +6,6 @@ import java.util.List;
  * The Reverse Squiggly
  *
  * @Brian Huang
- *
  */
 public class ReverseSquiggly extends Shapes
 {

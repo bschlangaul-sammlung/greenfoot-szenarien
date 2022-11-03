@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Tower here.
- *
  */
 public class Tower extends SWorld
 {

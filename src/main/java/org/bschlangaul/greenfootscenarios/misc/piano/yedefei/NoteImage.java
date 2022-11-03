@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class NoteImage here.
- *
  */
 public class NoteImage extends Image
 {

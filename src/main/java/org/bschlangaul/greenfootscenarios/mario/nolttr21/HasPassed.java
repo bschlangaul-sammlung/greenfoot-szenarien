@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class HasPassed here.
- *
  */
 public class HasPassed extends Text
 {

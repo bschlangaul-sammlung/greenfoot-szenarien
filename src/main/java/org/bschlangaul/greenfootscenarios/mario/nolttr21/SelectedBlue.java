@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class SelectedBlue here.
- *
  */
 public class SelectedBlue extends Characters
 {

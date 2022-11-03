@@ -7,7 +7,6 @@ import greenfoot.*;
  *
  * @author Dietrich Boles (University of Oldenburg, Germany)
  * @version 1.0 (15.02.2007)
- *
  */
 public class TetrisWorld extends World
 {

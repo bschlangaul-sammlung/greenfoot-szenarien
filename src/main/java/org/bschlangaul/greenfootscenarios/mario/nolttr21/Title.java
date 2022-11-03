@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Title here.
- *
  */
 public class Title extends Text
 {

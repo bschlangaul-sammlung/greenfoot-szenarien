@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Characters here.
- *
  */
 public class Characters extends AllMarios
 {

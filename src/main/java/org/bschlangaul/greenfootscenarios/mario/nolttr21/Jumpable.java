@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Jumpable here.
- *
  */
 public class Jumpable extends Enemies
 {

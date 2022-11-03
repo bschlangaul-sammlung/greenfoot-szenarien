@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class StartGround here.
- *
  */
 public class StartGround extends Decoration
 {

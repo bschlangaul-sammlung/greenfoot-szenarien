@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Procede here.
- *
  */
 public class Procede extends Text
 {

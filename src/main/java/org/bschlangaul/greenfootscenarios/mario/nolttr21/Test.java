@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Test here.
- *
  */
 public class Test extends SWorld
 {

@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Black here.
- *
  */
 public class Black extends Decoration
 {

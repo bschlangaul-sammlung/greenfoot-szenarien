@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Ball here.
- *
  */
 public class Ball extends Actor
 {

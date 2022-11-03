@@ -5,7 +5,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Key2 here.
- *
  */
 public class Key extends Actor
 {

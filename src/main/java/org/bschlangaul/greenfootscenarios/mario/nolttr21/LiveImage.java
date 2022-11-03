@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class LiveImage here.
- *
  */
 public class LiveImage extends Text
 {
@@ -24,4 +23,3 @@ public class LiveImage extends Text
         }
     }
 }
-

@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class WorldN here.
- *
  */
 public class WorldN extends Text
 {

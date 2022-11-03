@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class StatT here.
- *
  */
 public class StatT extends Text
 {

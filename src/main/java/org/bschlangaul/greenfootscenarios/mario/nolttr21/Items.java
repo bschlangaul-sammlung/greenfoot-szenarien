@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Items here.
- *
  */
 public class Items extends Actor
 {

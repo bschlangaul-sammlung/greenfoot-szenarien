@@ -6,7 +6,6 @@ import java.util.List;
  * The Reverse L Shape
  *
  * @Brian Huang
- *
  */
 public class ReverseLShape extends Shapes
 {

@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Text here.
- *
  */
 public class Text extends Actor
 {

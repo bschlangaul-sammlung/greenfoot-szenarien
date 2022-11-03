@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Luigi here.
- *
  */
 public class Luigi extends Text
 {

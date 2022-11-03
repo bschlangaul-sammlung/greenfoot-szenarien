@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Jump here.
- *
  */
 public class Jump extends Projectiles
 {

@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class PressEnter here.
- *
  */
 public class PressEnter extends Text
 {

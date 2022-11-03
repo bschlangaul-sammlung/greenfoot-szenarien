@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Arrow pointing to your currently selected character
- *
  */
 public class CharacterArrow extends Characters
 {

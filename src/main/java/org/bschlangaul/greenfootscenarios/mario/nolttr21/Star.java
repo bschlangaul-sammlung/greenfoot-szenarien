@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Star here.
- *
  */
 public class Star extends Decoration
 {

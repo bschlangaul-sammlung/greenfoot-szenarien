@@ -6,7 +6,6 @@ import java.util.List;
  * The Line Shape
  *
  * @Brian Huang
- *
  */
 public class LineShape extends Shapes
 {

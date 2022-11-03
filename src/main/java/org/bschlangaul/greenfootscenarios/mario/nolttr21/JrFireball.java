@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class JrFireball here.
- *
  */
 public class JrFireball extends NonJump
 {

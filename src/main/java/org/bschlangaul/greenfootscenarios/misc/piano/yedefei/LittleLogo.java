@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class LittleLogo here.
- *
  */
 public class LittleLogo extends Image
 {

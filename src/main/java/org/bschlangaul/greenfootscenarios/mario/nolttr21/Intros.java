@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Intros here.
- *
  */
 public class Intros extends Actor
 {

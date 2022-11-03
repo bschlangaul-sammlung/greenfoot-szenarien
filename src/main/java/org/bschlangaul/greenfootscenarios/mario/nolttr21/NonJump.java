@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class NonJump here.
- *
  */
 public class NonJump extends Projectiles
 {

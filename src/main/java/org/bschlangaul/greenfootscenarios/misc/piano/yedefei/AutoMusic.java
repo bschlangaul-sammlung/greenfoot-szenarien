@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 /**
  * Write a description of class dddd here.
- *
  */
 public class AutoMusic extends Actor
 {

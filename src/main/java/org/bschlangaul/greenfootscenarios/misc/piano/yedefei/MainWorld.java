@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class MainWorld here.
- *
  */
 public class MainWorld extends World
 {

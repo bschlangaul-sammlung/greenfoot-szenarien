@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class C here.
- *
  */
 public class C extends Worlds
 {

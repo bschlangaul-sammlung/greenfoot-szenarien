@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * decoration
- *
  */
 public class MapAirship extends Decoration
 {

@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Table here.
- *
  */
 public class Table extends World
 {

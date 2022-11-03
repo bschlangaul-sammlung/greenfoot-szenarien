@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Two here.
- *
  */
 public class Two extends Worlds
 {

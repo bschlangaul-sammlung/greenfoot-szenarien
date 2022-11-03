@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * helps move the airship
- *
  */
 public class Ball extends Actor
 {

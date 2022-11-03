@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Super Mario World style goal post
- *
  */
 public class Pole extends Actor
 {

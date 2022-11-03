@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Back here.
- *
  */
 public class Back extends Image
 {

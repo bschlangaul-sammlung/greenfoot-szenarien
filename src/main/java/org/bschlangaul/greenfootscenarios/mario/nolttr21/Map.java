@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Map here.
- *
  */
 public class Map extends SWorld
 {

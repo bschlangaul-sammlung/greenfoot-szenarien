@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class FreeModel here.
- *
  */
 public class FreeModel extends Image
 {

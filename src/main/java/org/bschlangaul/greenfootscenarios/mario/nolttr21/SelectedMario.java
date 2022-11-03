@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * On the Main menu, allows you to select mario as your character
- *
  */
 public class SelectedMario extends Characters
 {

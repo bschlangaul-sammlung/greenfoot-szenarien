@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class MapMario here.
- *
  */
 public class MapMario extends AllMarios
 {

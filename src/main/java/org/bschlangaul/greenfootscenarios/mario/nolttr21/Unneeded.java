@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Unneeded here.
- *
  */
 public class Unneeded extends Actor
 {

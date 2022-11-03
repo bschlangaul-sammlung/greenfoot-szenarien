@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class RecordMachine here.
- *
  */
 public class RecordMachine extends Image
 {

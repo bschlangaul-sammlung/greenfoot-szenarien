@@ -4,7 +4,6 @@ import java.util.List;
 
 /**
  * Write a description of class Squiggly here.
- *
  */
 public class Squiggly extends Shapes
 {

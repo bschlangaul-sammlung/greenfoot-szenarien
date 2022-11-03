@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Door here.
- *
  */
 public class Door extends Decoration
 {

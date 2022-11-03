@@ -1,10 +1,9 @@
 package org.bschlangaul.greenfootscenarios.space_invaders.jwilshire;
 
-import greenfoot.*; 
+import greenfoot.*;
 
 /**
  * Write a description of class Ship here.
- *
  */
 public class Ship extends Actor
 {

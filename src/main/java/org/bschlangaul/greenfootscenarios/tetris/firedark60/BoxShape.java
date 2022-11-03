@@ -4,7 +4,6 @@ import java.util.List;
 
 /**
  * Write a description of class BoxShape here.
- *
  */
 public class BoxShape extends Shapes
 {

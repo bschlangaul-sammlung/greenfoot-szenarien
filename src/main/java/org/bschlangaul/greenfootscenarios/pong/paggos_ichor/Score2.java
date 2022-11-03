@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class score2 here.
- *
  */
 public class Score2 extends Actor
 {

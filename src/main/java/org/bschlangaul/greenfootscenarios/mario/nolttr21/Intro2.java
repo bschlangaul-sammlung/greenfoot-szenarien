@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Intro2 here.
- *
  */
 public class Intro2 extends Intros
 {

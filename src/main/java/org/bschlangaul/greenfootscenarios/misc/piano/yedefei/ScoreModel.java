@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class ScoreModel here.
- *
  */
 public class ScoreModel extends Image
 {

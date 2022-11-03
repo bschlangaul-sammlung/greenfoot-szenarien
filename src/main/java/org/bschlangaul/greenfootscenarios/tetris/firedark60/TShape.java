@@ -6,7 +6,6 @@ import java.util.List;
  * The T Shape
  *
  * @Brian Huang
- *
  */
 public class TShape extends Shapes
 {

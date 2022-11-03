@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Coin2 here.
- *
  */
 public class Coin2 extends Worlds
 {

@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Solid here.
- *
  */
 public class Solid extends Actor
 {

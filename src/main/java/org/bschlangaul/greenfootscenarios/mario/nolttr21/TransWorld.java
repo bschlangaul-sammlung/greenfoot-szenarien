@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class TransWorld here.
- *
  */
 public class TransWorld extends SWorld
 {

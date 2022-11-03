@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Worlds here.
- *
  */
 public class Worlds extends Actor
 {

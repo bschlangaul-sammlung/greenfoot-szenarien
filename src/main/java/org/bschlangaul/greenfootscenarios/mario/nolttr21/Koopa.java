@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Koopa here.
- *
  */
 public class Koopa extends Jumpable
 {

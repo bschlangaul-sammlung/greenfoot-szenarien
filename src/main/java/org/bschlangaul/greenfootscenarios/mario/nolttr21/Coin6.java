@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Coin6 here.
- *
  */
 public class Coin6 extends Worlds
 {

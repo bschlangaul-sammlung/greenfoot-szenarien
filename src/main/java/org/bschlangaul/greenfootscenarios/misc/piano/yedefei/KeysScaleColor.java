@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class KeysScaleColor here.
- *
  */
 public class KeysScaleColor extends Actor
 {

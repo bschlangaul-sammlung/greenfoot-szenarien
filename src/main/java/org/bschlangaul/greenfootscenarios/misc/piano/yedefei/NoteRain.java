@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class NoteRain here.
- *
  */
 public class NoteRain extends Actor
 {

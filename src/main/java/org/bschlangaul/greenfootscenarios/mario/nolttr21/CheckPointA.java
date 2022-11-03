@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class CheckPointA here.
- *
  */
 public class CheckPointA extends Items
 {

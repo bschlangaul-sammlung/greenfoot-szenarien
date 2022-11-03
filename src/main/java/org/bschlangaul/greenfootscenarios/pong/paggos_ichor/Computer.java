@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class Computer here.
- *
  */
 public class Computer extends Actor
 {

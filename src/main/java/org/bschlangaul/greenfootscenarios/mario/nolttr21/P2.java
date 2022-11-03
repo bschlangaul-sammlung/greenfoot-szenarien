@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class P2 here.
- *
  */
 public class P2 extends Items
 {

@@ -4,7 +4,6 @@ import greenfoot.*;
 
 /**
  * Write a description of class MapControls here.
- *
  */
 public class MapControls extends World
 {
