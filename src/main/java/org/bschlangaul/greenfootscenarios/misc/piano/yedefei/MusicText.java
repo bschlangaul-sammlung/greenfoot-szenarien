@@ -2,7 +2,6 @@ package org.bschlangaul.greenfootscenarios.misc.piano.yedefei;
 
 import greenfoot.*;
 
-
 /**
  * Write a description of class MusicText here.
  *
