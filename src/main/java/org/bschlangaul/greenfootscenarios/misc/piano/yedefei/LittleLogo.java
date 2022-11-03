@@ -1,17 +1,16 @@
 package org.bschlangaul.greenfootscenarios.misc.piano.yedefei;
+
 import greenfoot.*;
 
 /**
  * Write a description of class LittleLogo here.
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class LittleLogo extends Image
 {
     /**
-     * Act - do whatever the LittleLogo wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the LittleLogo wants to do. This method is called whenever the 'Act' or
+     * 'Run' button gets pressed in the environment.
      */
     public void act()
     {
