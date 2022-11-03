@@ -1,0 +1,26 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class LiveImage here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class LiveImage extends Text
+{
+    public int life = 50;
+    /**
+     * Act - do whatever the Intro2 wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        life--;
+        getImage().scale(100, 50);
+        if(life < 0)
+        {
+            getWorld().removeObject(this);
+        }
+    }
+}
+    

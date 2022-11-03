@@ -1,0 +1,80 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class Bowserjr here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Bowserjr extends Actor
+{
+    GreenfootImage jr = new GreenfootImage("jr.png");
+    public boolean left = true;
+    public boolean just = false;
+    public int life = 3;
+    
+    public Bowserjr()
+    {
+        
+        
+    }
+    /**
+     * Act - do whatever the Bowserjr wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        if (left)
+        {
+            setLocation(getX()-10,getY());
+        }
+        else
+        {
+            setLocation(getX()+10,getY());
+        }
+        
+        setImage(jr);
+
+        if(isTouching(null))
+        {
+            // jr.mirrorHorizontally();
+            if(left)
+            {
+                left = false;
+                setLocation(getX()+10,getY());
+                just = true;
+            }
+            else
+            {
+                left = true;
+                setLocation(getX()-10,getY());
+                just = true;
+            }
+        }
+        
+        if(just)
+        {
+            jr.mirrorHorizontally();
+            just = false;
+        }
+        
+        if(isTouching(Bullet.class))
+        {
+            removeTouching(Bullet.class);
+            life--;
+        }
+        
+        if (life < 1)
+        {
+            getWorld().addObject(new Peach(),350,0);
+            getWorld().removeObject(this);
+            BossWorld2().music.stop();
+        }
+    }
+    
+    
+    public void turn()
+    {
+        jr.mirrorHorizontally();
+    }
+}
