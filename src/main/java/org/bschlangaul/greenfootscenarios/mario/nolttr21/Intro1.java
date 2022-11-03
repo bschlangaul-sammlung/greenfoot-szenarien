@@ -1,3 +1,5 @@
+package org.bschlangaul.greenfootscenarios.mario.nolttr21;
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -22,4 +24,3 @@ public class Intro1 extends Intros
         }
     }    
     }    
-
