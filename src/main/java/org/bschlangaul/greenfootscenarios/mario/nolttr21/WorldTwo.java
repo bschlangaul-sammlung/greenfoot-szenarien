@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Skyworld
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class WorldTwo extends SWorld
@@ -13,13 +13,14 @@ public class WorldTwo extends SWorld
     private ScoreBoard scoreBoard;
     static GreenfootSound music = new GreenfootSound("1.mp3");
     static GreenfootSound start = new GreenfootSound("Stage.wav");
-    private boolean playing = false; //determines if the music is playing or not
+    private boolean playing = false; // determines if the music is playing or not
     public static boolean flag = false;
+
     /**
      * Constructs world two
      */
     public WorldTwo()
-    {    
+    {
         super(700, 400, 1, 8285);
         WorldN.world = 2;
         StatT.time = 0;
@@ -28,29 +29,29 @@ public class WorldTwo extends SWorld
         // setPaintOrder(LiveText.class,LiveImage.class,Intro2.class);
         GreenfootImage bg = new GreenfootImage("clouds.jpg");
         setScrollingBackground(bg);
-        if(!music.isPlaying() && playing == false)
+        if (!music.isPlaying() && playing == false)
         {
             music.playLoop();
             playing = true;
             music.setVolume(100);
         }
         buildWorld();
-        if(!start.isPlaying())
+        if (!start.isPlaying())
         {
             start.play();
         }
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+
         Intro2 intro = new Intro2();
-        addObject(intro, 350,200);
-        intro.setLocation(351,200);
+        addObject(intro, 350, 200);
+        intro.setLocation(351, 200);
     }
 
     /**
@@ -70,8 +71,8 @@ public class WorldTwo extends SWorld
     }
 
     /**
-     * When called, removes all objects in the world and rebuilds it.
-     * If lives are less than 0, the world is set to the game over world.
+     * When called, removes all objects in the world and rebuilds it. If lives are less than 0, the
+     * world is set to the game over world.
      */
     public void rebuildWorld()
     {
@@ -102,7 +103,7 @@ public class WorldTwo extends SWorld
      * Adds all the objects to the world
      */
     private void buildWorld()
-    {   
+    {
 
         addObject(new Ground(), 0, 390);
 
@@ -118,7 +119,7 @@ public class WorldTwo extends SWorld
         addObject(new Brick(), 632, 100);
         addObject(new Brick(), 664, 100);
 
-        
+
         addObject(new VerPlatform(), 750, 125);
         addObject(new HorPlatform(), 850, 200);
         addObject(new VerPlatform(), 1150, 150);
@@ -201,8 +202,10 @@ public class WorldTwo extends SWorld
 
         addObject(new Brick(), 5600, 290);
         addObject(new Brick(), 5632, 290);
-        if (!flag) addObject(new CheckPointD(),5632,250);
-        else addObject(new CheckPointA(),5632,250);
+        if (!flag)
+            addObject(new CheckPointD(), 5632, 250);
+        else
+            addObject(new CheckPointA(), 5632, 250);
         addObject(new Brick(), 5664, 290);
 
         addObject(new Brick(), 5800, 180);
@@ -295,13 +298,13 @@ public class WorldTwo extends SWorld
 
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        addObject(new Intro2(), 350,200);
-        addObject(new Black(),7935,-200);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+        addObject(new Intro2(), 350, 200);
+        addObject(new Black(), 7935, -200);
     }
 }

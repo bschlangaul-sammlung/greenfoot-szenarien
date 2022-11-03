@@ -1,40 +1,41 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Tower here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class Tower extends SWorld
 {
     private ScoreBoard scoreBoard;
-    static GreenfootSound theme = new GreenfootSound("4.mp3");//I can take care of the music
+    static GreenfootSound theme = new GreenfootSound("4.mp3");// I can take care of the music
     static GreenfootSound start = new GreenfootSound("Stage.wav");
     public static boolean flag = false;
+
     /**
      * Constructor for objects of class Tower.
-     * 
+     *
      */
     public Tower()
     {
         super(700, 400, 1, 701, 2000);
         GreenfootImage bg = new GreenfootImage("World4Bg.png");
-        setScrollingBackground(bg,1);
+        setScrollingBackground(bg, 1);
         buildWorld();
-        if(!start.isPlaying())
+        if (!start.isPlaying())
         {
             start.play();
         }
 
-        if(!theme.isPlaying())
+        if (!theme.isPlaying())
         {
             theme.play();
         }
     }
-    
+
     public void act()
     {
         super.act();
@@ -45,8 +46,8 @@ public class Tower extends SWorld
     }
 
     /**
-     * When called, removes all objects in the world and rebuilds it.
-     * If lives are less than 0, the world is set to the game over world.
+     * When called, removes all objects in the world and rebuilds it. If lives are less than 0, the
+     * world is set to the game over world.
      */
     public void rebuildWorld()
     {
@@ -56,7 +57,7 @@ public class Tower extends SWorld
             Greenfoot.setWorld(new StartMenu1());
         }
         ammunition = 0;
-        
+
         buildWorld();
     }
 
@@ -77,9 +78,8 @@ public class Tower extends SWorld
     }
 
     /**
-     * Put your stuff in here
-     * bricks and ? blocks are 32 pixels tall and wide
-     * ground blocks are 200 pixels wide and 32 pixels tall
+     * Put your stuff in here bricks and ? blocks are 32 pixels tall and wide ground blocks are 200
+     * pixels wide and 32 pixels tall
      */
     private void buildWorld()
     {
@@ -100,50 +100,52 @@ public class Tower extends SWorld
         }
         addScoreboard();
         addObject(new Ground(), 100, 1990);
-        addObject(new Ground(), 300, 1990);//the grassy ground
-        addObject(new Brick(), 150, 1890);//regular brown brick
-        addObject(new Block(), 182, 1890);//? block
+        addObject(new Ground(), 300, 1990);// the grassy ground
+        addObject(new Brick(), 150, 1890);// regular brown brick
+        addObject(new Block(), 182, 1890);// ? block
         addObject(new Brick(), 214, 1890);
-        addObject(new VerPlatform(),380,1770);
+        addObject(new VerPlatform(), 380, 1770);
         addObject(new HorPlatform(), 157, 1700);
-        addObject(new LongBrick(),523,1700);
-        addObject(new Ghoomba(),523,1668);
-        addObject(new LongBrick(),623,1700);
-        addObject(new Ghoomba(),623,1668);
-        addObject(new Brick(),459,1700);
-        addObject(new Brick(),459,1668);
-        addObject(new Brick(),687,1668);
+        addObject(new LongBrick(), 523, 1700);
+        addObject(new Ghoomba(), 523, 1668);
+        addObject(new LongBrick(), 623, 1700);
+        addObject(new Ghoomba(), 623, 1668);
+        addObject(new Brick(), 459, 1700);
+        addObject(new Brick(), 459, 1668);
+        addObject(new Brick(), 687, 1668);
 
-        addObject(new VerPlatform(),380,1560);
-        addObject(new LongBrick(),523,1500);
-        addObject(new Ghoomba(),523,1568);
-        addObject(new LongBrick(),623,1500);
-        addObject(new Ghoomba(),623,1468);
+        addObject(new VerPlatform(), 380, 1560);
+        addObject(new LongBrick(), 523, 1500);
+        addObject(new Ghoomba(), 523, 1568);
+        addObject(new LongBrick(), 623, 1500);
+        addObject(new Ghoomba(), 623, 1468);
 
-        addObject(new Brick(),16,1468);
-        addObject(new FireFlower(),16,1436);
+        addObject(new Brick(), 16, 1468);
+        addObject(new FireFlower(), 16, 1436);
 
-        addObject(new VerPlatform(),500,1250);
-        addObject(new VerPlatform(false),600,1150);
-        addObject(new VerPlatform(),500,1000);
-        addObject(new VerPlatform(false),600,950);
-        addObject(new VerPlatform(),500,750);
-        addObject(new VerPlatform(false),600,750);
+        addObject(new VerPlatform(), 500, 1250);
+        addObject(new VerPlatform(false), 600, 1150);
+        addObject(new VerPlatform(), 500, 1000);
+        addObject(new VerPlatform(false), 600, 950);
+        addObject(new VerPlatform(), 500, 750);
+        addObject(new VerPlatform(false), 600, 750);
 
-        if (!flag) addObject(new CheckPointD(),300,462);
-        else addObject(new CheckPointA(),300,462);
+        if (!flag)
+            addObject(new CheckPointD(), 300, 462);
+        else
+            addObject(new CheckPointA(), 300, 462);
 
-        
-        addObject(new LongBrick(),64,500);
-        addObject(new LongBrick(),128,500);
-        addObject(new LongBrick(),196,500);
-        addObject(new LongBrick(),240,500);
-        addObject(new LongBrick(),300,500);
-        addObject(new LongBrick(),400,500);
 
-        addObject(new Pipe(),32,450);
-        
-        
+        addObject(new LongBrick(), 64, 500);
+        addObject(new LongBrick(), 128, 500);
+        addObject(new LongBrick(), 196, 500);
+        addObject(new LongBrick(), 240, 500);
+        addObject(new LongBrick(), 300, 500);
+        addObject(new LongBrick(), 400, 500);
+
+        addObject(new Pipe(), 32, 450);
+
+
         if (flag)
         {
             if (marioGun == true)
@@ -159,8 +161,8 @@ public class Tower extends SWorld
                 addMainActor(new MarioS(), 200, 300, 250, 150);
             }
         }
-        
-        addObject(new Block(),687,1168);
+
+        addObject(new Block(), 687, 1168);
     }
 
     /**

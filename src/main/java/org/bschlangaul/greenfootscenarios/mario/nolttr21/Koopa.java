@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Koopa here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class Koopa extends Jumpable
@@ -22,6 +22,7 @@ public class Koopa extends Jumpable
     public int ySpeed;
     public boolean onGround = false;
     public static boolean getHit = false;
+
     public Koopa()
     {
         health = 3;
@@ -38,24 +39,24 @@ public class Koopa extends Jumpable
         one = new GreenfootImage("k1.png");
         two = new GreenfootImage("k2.png");
         three = new GreenfootImage("k3.png");
-        
+
     }
 
     /**
-     * Act - do whatever the Koopa wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the Koopa wants to do. This method is called whenever the 'Act' or 'Run'
+     * button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
-        
 
-        if(invince == 100)
+
+        if (invince == 100)
         {
             ySpeed = 0;
         }
         time++;
-        ySpeed ++;
-        Actor brick = getOneObjectAtOffset(0, getImage().getHeight()/2, LongBrick.class);
+        ySpeed++;
+        Actor brick = getOneObjectAtOffset(0, getImage().getHeight() / 2, LongBrick.class);
         if (brick != null)
         {
             onGround = true;
@@ -64,25 +65,27 @@ public class Koopa extends Jumpable
         {
             onGround = false;
         }
-        while (getOneObjectAtOffset(getImage().getWidth()/2,getImage().getHeight()/2, LongBrick.class) != null)
+        while (getOneObjectAtOffset(getImage().getWidth() / 2, getImage().getHeight() / 2,
+                        LongBrick.class) != null)
         {
-            setLocation(getX(), getY()-1);
+            setLocation(getX(), getY() - 1);
             onGround = true;
             ySpeed = 0;
         }
-        setLocation(getX(), getY() + ySpeed/2);
+        setLocation(getX(), getY() + ySpeed / 2);
         if (onGround && time % 2 == 1 && invince < 0)
         {
             ySpeed = -(Greenfoot.getRandomNumber(10) + 10);
 
         }
 
-        if (getOneObjectAtOffset (getImage().getWidth()/2, 0, Brick.class)!= null)
+        if (getOneObjectAtOffset(getImage().getWidth() / 2, 0, Brick.class) != null)
         {
-            setLocation(getX()-1, getY());
+            setLocation(getX() - 1, getY());
         }
 
-        if (health != 0)speed = 16 / health;
+        if (health != 0)
+            speed = 16 / health;
         // else
 
         // Actor brick = getOneObjectAtOffset(0, getImage().getHeight()/2, LongBrick.class);
@@ -98,35 +101,35 @@ public class Koopa extends Jumpable
         // onGround = true;
         // ySpeed = 0;
         // }
-        if(invince == 99)
+        if (invince == 99)
         {
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
-            getWorld().addObject(new Star(),getX(),getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
+            getWorld().addObject(new Star(), getX(), getY());
 
         }
         // Actor brick1 = getOneObjectAtOffset(0, (getImage().getHeight()/2) - 4 , LongBrick.class);
@@ -142,28 +145,28 @@ public class Koopa extends Jumpable
         invince--;
         if (invince < 0)
         {
-            if(time % 10 == 1)
+            if (time % 10 == 1)
             {
                 number++;
-                if(number == 4)
+                if (number == 4)
                 {
                     number = 1;
                 }
-                if(number == 1)
+                if (number == 1)
                 {
                     setImage(one);
                 }
-                if(number == 2)
+                if (number == 2)
                 {
                     setImage(two);
                 }
-                if(number == 3)
+                if (number == 3)
                 {
                     setImage(three);
                 }
             }
 
-            if(left)
+            if (left)
             {
                 move(-speed);
             }
@@ -173,7 +176,7 @@ public class Koopa extends Jumpable
             }
         }
 
-        if(isTouching(Brick.class))
+        if (isTouching(Brick.class))
         {
             one.mirrorHorizontally();
             two.mirrorHorizontally();
@@ -181,12 +184,12 @@ public class Koopa extends Jumpable
             left = !left;
         }
 
-        if(health <= 0)
+        if (health <= 0)
         {
-            if(getX() > 350)
-                getWorld().addObject(new Key2(),getX()-250,0);
+            if (getX() > 350)
+                getWorld().addObject(new Key2(), getX() - 250, 0);
             else
-                getWorld().addObject(new Key2(),getX()+250,0);
+                getWorld().addObject(new Key2(), getX() + 250, 0);
             getWorld().removeObject(this);
             return;
             // Greenfoot.delay(100);
@@ -199,21 +202,22 @@ public class Koopa extends Jumpable
             if (health > 0)
             {
                 invince = 20;
-                SWorld world = (SWorld)getWorld();
+                SWorld world = (SWorld) getWorld();
                 Greenfoot.playSound("inShell.mp3");
-                world.addObject(new BossShell(health),world.getUnivX(getX()),world.getUnivY(getY()));
+                world.addObject(new BossShell(health), world.getUnivX(getX()),
+                                world.getUnivY(getY()));
                 world.removeObject(this);
                 return;
             }
         }
-    }  
-    
+    }
+
     public static void lose()
     {
         health--;
         invince = 100;
         getHit = true;
-        
+
     }
 
 }

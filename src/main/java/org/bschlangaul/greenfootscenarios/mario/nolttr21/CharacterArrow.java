@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Arrow pointing to your currently selected character
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class CharacterArrow extends Characters
@@ -14,11 +14,12 @@ public class CharacterArrow extends Characters
     public boolean atToad = false;
     public boolean atLuigi = false;
     public int enterDelay = 20;
+
     /**
-     * Act - do whatever the CharacterArrow wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the CharacterArrow wants to do. This method is called whenever the 'Act' or
+     * 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
         enterDelay--;
         if (enterDelay < 0)
@@ -31,9 +32,9 @@ public class CharacterArrow extends Characters
                     return;
                 }
 
-                if(atToad)
+                if (atToad)
                 {
-                    setLocation(getX() + 70,getY());
+                    setLocation(getX() + 70, getY());
                     atLuigi = true;
                     atToad = false;
                     return;
@@ -41,7 +42,7 @@ public class CharacterArrow extends Characters
 
                 if (atMario)
                 {
-                    setLocation(getX() + 70,getY());
+                    setLocation(getX() + 70, getY());
                     atToad = true;
                     atMario = false;
                     return;
@@ -58,9 +59,9 @@ public class CharacterArrow extends Characters
                     return;
                 }
 
-                if(atToad)
+                if (atToad)
                 {
-                    setLocation(getX() - 70,getY());
+                    setLocation(getX() - 70, getY());
                     atMario = true;
                     atToad = false;
                     return;
@@ -68,7 +69,7 @@ public class CharacterArrow extends Characters
 
                 if (atLuigi)
                 {
-                    setLocation(getX() - 70,getY());
+                    setLocation(getX() - 70, getY());
                     atToad = true;
                     atLuigi = false;
                     return;
@@ -76,19 +77,19 @@ public class CharacterArrow extends Characters
 
             }
             enterDelay--;
-            if(Greenfoot.isKeyDown("enter") && enterDelay < 0)
+            if (Greenfoot.isKeyDown("enter") && enterDelay < 0)
             {
-                StartMenu1 start = (StartMenu1)getWorld();
+                StartMenu1 start = (StartMenu1) getWorld();
                 start.theme.stop();
                 if (atMario)
                 {
-                    
+
                     Mario.characterName = "mario";
                     MarioS.characterName = "mario";
                     MarioG.characterName = "mario";
                     MapMario.characterName = "mario";
                     Luigi.characterName = "Mario";
-                    
+
                     Greenfoot.setWorld(new MapControls());
                 }
                 else if (atLuigi)
@@ -113,4 +114,4 @@ public class CharacterArrow extends Characters
         }
     }
 
-}    
+}

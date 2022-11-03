@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class StartGround here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class StartGround extends Decoration
@@ -14,9 +14,10 @@ public class StartGround extends Decoration
     public GreenfootImage brick = new GreenfootImage("brick.png");
     public GreenfootImage ground = new GreenfootImage("Ground.png");
     public static boolean beBrick;
+
     public StartGround()
     {
-        time ++;
+        time++;
         if (beBrick)
         {
             setImage(brick);
@@ -26,24 +27,24 @@ public class StartGround extends Decoration
             setImage(ground);
         }
     }
-    
+
     /**
-     * Act - do whatever the StartGround wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the StartGround wants to do. This method is called whenever the 'Act' or
+     * 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
-        
+
         if (time > 30)
         {
-            setLocation(getX()-5,getY());
+            setLocation(getX() - 5, getY());
         }
-        
+
         if (getY() != 388)
         {
-            setLocation(getX(),388);
+            setLocation(getX(), 388);
         }
-        
+
         if (time % 50 == 1)
         {
             beBrick = false;
@@ -52,8 +53,8 @@ public class StartGround extends Decoration
         {
             beBrick = true;
         }
-        
-    }   
-    
-    
+
+    }
+
+
 }

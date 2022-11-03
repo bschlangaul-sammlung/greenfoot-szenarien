@@ -1,84 +1,87 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class P2 here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class P2 extends Items
 {
     public boolean depressed = false;
     public int time = 200;
+
     /**
-     * Act - do whatever the P2 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the P2 wants to do. This method is called whenever the 'Act' or 'Run'
+     * button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
-        if(isTouching(Mario.class))
+        if (isTouching(Mario.class))
         {
             depressed = true;
         }
-        
-        if(isTouching(MarioG.class))
+
+        if (isTouching(MarioG.class))
         {
             depressed = true;
         }
-        
-        if(isTouching(MarioS.class))
+
+        if (isTouching(MarioS.class))
         {
-            if (!MarioS.gotHit)depressed = true;
+            if (!MarioS.gotHit)
+                depressed = true;
         }
-        
+
         while (depressed && !isTouching(LongBrick.class))
-            {
-                setLocation(getX(),getY()+3);
-            }
-            
-            while(isTouching(Cannon2.class))
-            {
-                setLocation(getX()-3,getY());
-            }
-        
+        {
+            setLocation(getX(), getY() + 3);
+        }
+
+        while (isTouching(Cannon2.class))
+        {
+            setLocation(getX() - 3, getY());
+        }
+
         if (time == 199)
         {
-            
-            
+
+
         }
         if (depressed)
         {
             win();
             Greenfoot.playSound("fell.mp3");
             setImage("D.png");
-            
-            
-            
+
+
+
             time--;
             getWorld().removeObject(this);
         }
         else
         {
             setImage("P.png");
-            while(isTouching(LongBrick.class))
+            while (isTouching(LongBrick.class))
             {
-                setLocation(getX(),getY()-3);
+                setLocation(getX(), getY() - 3);
             }
         }
-        
+
         if (time == 0)
         {
             depressed = false;
             time = 200;
         }
-        
-    } 
+
+    }
+
     public void win()
     {
         // BossWorld.win.play();
         Bowser.gameWon = true;
-        
+
     }
 }

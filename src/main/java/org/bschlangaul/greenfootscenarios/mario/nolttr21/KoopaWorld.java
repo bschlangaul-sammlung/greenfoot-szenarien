@@ -1,48 +1,48 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * The final world with Bowser
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class KoopaWorld extends SWorld
 {
     private ScoreBoard scoreBoard;
     // private BowserLife bowserLife;
-    private int hits; //defines how much health to display for bowser
+    private int hits; // defines how much health to display for bowser
     GreenfootSound win = new GreenfootSound("done.mp3");
     static GreenfootSound music = new GreenfootSound("boom.mp3");
-    
-    
+
+
     /**
      * Calls the methods to construct KoopaWorld
      */
     public KoopaWorld()
-    {    
-        super(700, 400, 1, 700); 
-                // setPaintOrder(LiveText.class,LiveImage.class,Intro6.class);
+    {
+        super(700, 400, 1, 700);
+        // setPaintOrder(LiveText.class,LiveImage.class,Intro6.class);
         buildWorld();
         Greenfoot.start();
         addScoreboards();
         updateScoreboard();
         // hits = 50;
-        if(!music.isPlaying())
+        if (!music.isPlaying())
         {
             music.playLoop();
         }
         prepare();
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        addObject(new Intro7(), 350,200);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+        addObject(new Intro7(), 350, 200);
     }
 
     /**
@@ -59,9 +59,9 @@ public class KoopaWorld extends SWorld
      */
     private void buildWorld()
     {
-        addObject(new Block(),32,275);
-        addObject(new Block(),64,275);
-        
+        addObject(new Block(), 32, 275);
+        addObject(new Block(), 64, 275);
+
         if (marioGun == true)
         {
             addMainActor(new MarioG(), 50, 0, 250, 300);
@@ -74,8 +74,8 @@ public class KoopaWorld extends SWorld
         {
             addMainActor(new MarioS(), 50, 0, 250, 300);
         }
-        
-        
+
+
         // addObject(new Bowserjr(), 600, 100);
 
         addObject(new LongBrick(), -80, 390);
@@ -110,13 +110,13 @@ public class KoopaWorld extends SWorld
         addObject(new Brick(), 0, 6);
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        addObject(new Intro6(), 350,200);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+        addObject(new Intro6(), 350, 200);
     }
 
     /**
@@ -125,16 +125,16 @@ public class KoopaWorld extends SWorld
     public void rebuildWorld()
     {
         // ammunition = 0;
-        
+
         music.stop();
-        
+
         removeObjects(getObjects(null));
         buildWorld();
-        
-        
+
+
         // decreaseLives();
-        
-        
+
+
     }
 
     /**
@@ -157,15 +157,15 @@ public class KoopaWorld extends SWorld
     }
 
     /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
+     * Prepare the world for the start of the program. That is: create the initial objects and add
+     * them to the world.
      */
     private void prepare()
     {
-        
+
         Koopa cannon2 = new Koopa();
-        addObject(cannon2,339,353);
-        cannon2.setLocation(339,345);
-        
+        addObject(cannon2, 339, 353);
+        cannon2.setLocation(339, 345);
+
     }
 }

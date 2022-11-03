@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Castle level
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class Fortress extends SWorld
@@ -14,22 +14,23 @@ public class Fortress extends SWorld
     public static boolean flag = false;
     static GreenfootSound music = new GreenfootSound("4.mp3");
     static GreenfootSound start = new GreenfootSound("Stage.wav");
+
     /**
      * Constructs world four
      */
     public Fortress()
-    {    
+    {
         super(700, 400, 1, 5240);
         // setPaintOrder(LiveText.class,LiveImage.class,Intro4.class);
         GreenfootImage bg = new GreenfootImage("World4Bg.jpg");
-        setScrollingBackground(bg,1);
+        setScrollingBackground(bg, 1);
         buildWorld();
         WorldN.world = 4;
-        if(!music.isPlaying())
+        if (!music.isPlaying())
         {
             music.playLoop();
         }
-        if(!start.isPlaying())
+        if (!start.isPlaying())
         {
             start.play();
         }
@@ -40,13 +41,13 @@ public class Fortress extends SWorld
         }
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        addObject(new Intro4(), 350,200);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+        addObject(new Intro4(), 350, 200);
     }
 
     /**
@@ -58,8 +59,8 @@ public class Fortress extends SWorld
     }
 
     /**
-     * When called, removes all objects in the world and rebuilds it.
-     * If lives are less than 0, the world is set to the game over world.
+     * When called, removes all objects in the world and rebuilds it. If lives are less than 0, the
+     * world is set to the game over world.
      */
     public void rebuildWorld()
     {
@@ -103,15 +104,18 @@ public class Fortress extends SWorld
         {
             if (marioGun == true)
             {
-                addMainActor(new MarioG(), 50, 352, 250, 300); // the last two int parameters are centered window x and y ranges
+                addMainActor(new MarioG(), 50, 352, 250, 300); // the last two int parameters are
+                                                               // centered window x and y ranges
             }
             if (marioBig == true)
             {
-                addMainActor(new Mario(), 50, 352, 250, 300); // the last two int parameters are centered window x and y ranges
+                addMainActor(new Mario(), 50, 352, 250, 300); // the last two int parameters are
+                                                              // centered window x and y ranges
             }
             if (marioSmall == true)
             {
-                addMainActor(new MarioS(), 50, 352, 250, 300); // the last two int parameters are centered window x and y ranges
+                addMainActor(new MarioS(), 50, 352, 250, 300); // the last two int parameters are
+                                                               // centered window x and y ranges
             }
         }
         top();
@@ -181,7 +185,7 @@ public class Fortress extends SWorld
         addObject(new Brick(), 2352, 358);
         addObject(new Brick(), 2384, 358);
 
-        
+
         // addObject(new LongBrick(), 2320, 326);
         addObject(new Brick(), 2256, 326);
         addObject(new Brick(), 2288, 326);
@@ -189,7 +193,7 @@ public class Fortress extends SWorld
         addObject(new Brick(), 2352, 326);
         addObject(new Brick(), 2384, 326);
 
-        
+
         addObject(new LongBrick(), 2320, 294);
         addObject(new LongBrick(), 2480, 390);
         addObject(new LongBrick(), 2480, 358);
@@ -278,35 +282,40 @@ public class Fortress extends SWorld
         {
             if (marioGun == true)
             {
-                addMainActor(new MarioG(), 4800, 352, 250, 300); // the last two int parameters are centered window x and y ranges
+                addMainActor(new MarioG(), 4800, 352, 250, 300); // the last two int parameters are
+                                                                 // centered window x and y ranges
             }
             if (marioBig == true)
             {
-                addMainActor(new Mario(), 4800, 352, 250, 300); // the last two int parameters are centered window x and y ranges
+                addMainActor(new Mario(), 4800, 352, 250, 300); // the last two int parameters are
+                                                                // centered window x and y ranges
             }
             if (marioSmall == true)
             {
-                addMainActor(new MarioS(), 4800, 352, 250, 300); // the last two int parameters are centered window x and y ranges
+                addMainActor(new MarioS(), 4800, 352, 250, 300); // the last two int parameters are
+                                                                 // centered window x and y ranges
             }
         }
 
-        
-        if (!flag)addObject(new CheckPointD(),4800,282);
-        else addObject(new CheckPointA(),4800,282);
+
+        if (!flag)
+            addObject(new CheckPointD(), 4800, 282);
+        else
+            addObject(new CheckPointA(), 4800, 282);
         addObject(new Pipe(), 5230, 278);
 
-        
-        
+
+
         addScoreboard();
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        addObject(new Intro4(), 350,200);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+        addObject(new Intro4(), 350, 200);
     }
 
     /**
@@ -318,7 +327,7 @@ public class Fortress extends SWorld
         addObject(new LongBrick(), 240, 0);
         addObject(new LongBrick(), 80, 32);
         addObject(new LongBrick(), 240, 32);
-        addObject(new LongBrick(), 80,64);
+        addObject(new LongBrick(), 80, 64);
         addObject(new LongBrick(), 240, 64);
         addObject(new LongBrick(), 80, 96);
         addObject(new LongBrick(), 240, 96);

@@ -1,28 +1,28 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Shoots towards mario to kill him
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class bFireball extends NonJump
 {
-    private boolean imminentDeath; //determines whether or not the fireball is about to be removed
-    
+    private boolean imminentDeath; // determines whether or not the fireball is about to be removed
+
     /**
      * This will call the method to move the fireball
      */
-    public void act() 
+    public void act()
     {
         moveFireball();
-    }    
-    
+    }
+
     /**
-     * This will move the fireball based on the left boolean.
-     * It will also destroy the fireball if it runs into a piece of the terrain
+     * This will move the fireball based on the left boolean. It will also destroy the fireball if
+     * it runs into a piece of the terrain
      */
     private void moveFireball()
     {
@@ -64,4 +64,4 @@ public class bFireball extends NonJump
             getWorld().removeObject(this);
         }
     }
-} 
+}

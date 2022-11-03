@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class WorldThree here.
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class WorldThree extends SWorld
@@ -13,13 +13,14 @@ public class WorldThree extends SWorld
     private ScoreBoard scoreBoard;
     static GreenfootSound music = new GreenfootSound("1.mp3");
     static GreenfootSound start = new GreenfootSound("Stage.wav");
-    private boolean playing = false; //defines if the music is playing or not
+    private boolean playing = false; // defines if the music is playing or not
     public static boolean flag = false;
+
     /**
      * Creates the world
      */
     public WorldThree()
-    {    
+    {
         super(700, 400, 1, 7500);
         // setPaintOrder(LiveText.class,LiveImage.class,Intro3.class,Block.class);
 
@@ -29,11 +30,11 @@ public class WorldThree extends SWorld
         GreenfootImage bg = new GreenfootImage("World3Bg.jpg");
         setScrollingBackground(bg);
         WorldN.world = 3;
-        if(!start.isPlaying())
+        if (!start.isPlaying())
         {
             start.play();
         }
-        if(!music.isPlaying() &&  playing == false)
+        if (!music.isPlaying() && playing == false)
         {
             playing = true;
             music.playLoop();
@@ -41,16 +42,16 @@ public class WorldThree extends SWorld
         buildWorld();
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+
         Intro3 intro = new Intro3();
-        addObject(intro, 350,200);
-        intro.setLocation(350,200);
+        addObject(intro, 350, 200);
+        intro.setLocation(350, 200);
     }
 
     /**
@@ -62,8 +63,8 @@ public class WorldThree extends SWorld
     }
 
     /**
-     * When called, removes all objects in the world and rebuilds it.
-     * If lives are less than 0, the world is set to the game over world.
+     * When called, removes all objects in the world and rebuilds it. If lives are less than 0, the
+     * world is set to the game over world.
      */
     public void rebuildWorld()
     {
@@ -146,13 +147,13 @@ public class WorldThree extends SWorld
         addScoreboard();
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        addObject(new Intro3(), 350,200);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+        addObject(new Intro3(), 350, 200);
     }
 
     /**
@@ -219,7 +220,7 @@ public class WorldThree extends SWorld
             }
         }
 
-        
+
         addObject(new Ghoomba(), 1450, 358);
         addObject(new HammerBro(), 1650, 358);
         addObject(new Ghoomba(), 1850, 358);
@@ -231,11 +232,11 @@ public class WorldThree extends SWorld
         addObject(new Block(), 1800, 100);
         if (!flag)
         {
-            addObject(new CheckPointD(),1791,60);
+            addObject(new CheckPointD(), 1791, 60);
         }
         else
         {
-            addObject(new CheckPointA(),1791,60);
+            addObject(new CheckPointA(), 1791, 60);
         }
 
         addObject(new Ghoomba(), 2250, 358);
@@ -323,7 +324,7 @@ public class WorldThree extends SWorld
         addObject(new LongBrick(), 4120, 262);
 
         addObject(new LongBrick(), 3960, 230);
-        //Happy Face
+        // Happy Face
         addObject(new Block(), 3832, 262);
         addObject(new Block(), 4088, 262);
         addObject(new Block(), 3896, 294);
@@ -333,7 +334,7 @@ public class WorldThree extends SWorld
         addObject(new Block(), 3992, 326);
         addObject(new Block(), 3992, 294);
         addObject(new Block(), 4024, 294);
-        //End Happy Face
+        // End Happy Face
         addObject(new Block(), 3960, 130);
     }
 
@@ -411,7 +412,7 @@ public class WorldThree extends SWorld
         addObject(new MagiKoopa(), 6960, 243);
 
         addObject(new Block(), 7200, 290);
-        addObject(new Black(),7150,-200);
+        addObject(new Black(), 7150, -200);
         addObject(new Pole(), 7400, 252);
 
     }

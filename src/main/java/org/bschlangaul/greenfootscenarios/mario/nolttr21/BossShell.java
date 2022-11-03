@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class BossShell here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class BossShell extends NonJumpable
@@ -19,34 +19,35 @@ public class BossShell extends NonJumpable
     public int initialDelay = 30;
     public static GreenfootSound slide = new GreenfootSound("slide.wav");
     public static boolean hurtable = false;
+
     public BossShell(int hp)
     {
         speed = 20 - (5 * hp);
-        life = 400-(100*hp);
+        life = 400 - (100 * hp);
         GreenfootImage img = getImage();
-        img.scale(50,50);
+        img.scale(50, 50);
         health = hp;
         hurtable = false;
     }
-    
+
     /**
-     * Act - do whatever the BossShell wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the BossShell wants to do. This method is called whenever the 'Act' or
+     * 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
-        
-        ySpeed ++;
+
+        ySpeed++;
         life--;
-        
-            
-            
-            if(isTouching(Brick.class))
+
+
+
+        if (isTouching(Brick.class))
         {
             left = !left;
         }
-        
-        Actor brick = getOneObjectAtOffset(0, getImage().getHeight()/2, LongBrick.class);
+
+        Actor brick = getOneObjectAtOffset(0, getImage().getHeight() / 2, LongBrick.class);
         if (brick != null)
         {
             onGround = true;
@@ -55,46 +56,46 @@ public class BossShell extends NonJumpable
         {
             onGround = false;
         }
-        
-        
-        
-        
-        
-        while (getOneObjectAtOffset(getImage().getWidth()/2,getImage().getHeight()/2, LongBrick.class) != null)
+
+
+
+        while (getOneObjectAtOffset(getImage().getWidth() / 2, getImage().getHeight() / 2,
+                        LongBrick.class) != null)
         {
-            setLocation(getX(), getY()-1);
+            setLocation(getX(), getY() - 1);
             onGround = true;
             ySpeed = 0;
         }
-        setLocation(getX(), getY() + ySpeed/2);
-        
+        setLocation(getX(), getY() + ySpeed / 2);
+
         initialDelay--;
-        if (initialDelay > 0) return;
-        
+        if (initialDelay > 0)
+            return;
+
         if (!slide.isPlaying())
         {
             slide.playLoop();
         }
-        
-        if(left)
-            {
-                move(-speed);
-            }
-            else
-            {
-                move(speed);
-            }
-            
-            hurtable = true;
-            
-            if (life < 0)
+
+        if (left)
+        {
+            move(-speed);
+        }
+        else
+        {
+            move(speed);
+        }
+
+        hurtable = true;
+
+        if (life < 0)
         {
             Greenfoot.playSound("outShell.mp3");
-            SWorld world = (SWorld)getWorld();
+            SWorld world = (SWorld) getWorld();
             slide.stop();
-            world.addObject(new Koopa(health),world.getUnivX(getX()),world.getUnivY(getY()));
+            world.addObject(new Koopa(health), world.getUnivX(getX()), world.getUnivY(getY()));
             world.removeObject(this);
             return;
         }
-    }    
+    }
 }

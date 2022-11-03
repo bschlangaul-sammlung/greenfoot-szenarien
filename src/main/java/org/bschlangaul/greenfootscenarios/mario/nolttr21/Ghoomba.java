@@ -1,24 +1,25 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * An annoying walking enemy
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class Ghoomba extends MovingEnemies
 {
-    private int stability; //stores how much health the ghoomba has
+    private int stability; // stores how much health the ghoomba has
     private GreenfootImage imageL;
     private GreenfootImage imageR;
-    
-    private int imageChangeTime; //defines how long to wait before the image changes
-    private int imageChangeDelayCount; //ticks up to change the image
-    private boolean imminentDeath; //determines if the ghoomba is about to die
-    private boolean hitEdge = false; //initialize value for hitEdge. Determines whether the ghoomba has hit the edge
-    
+
+    private int imageChangeTime; // defines how long to wait before the image changes
+    private int imageChangeDelayCount; // ticks up to change the image
+    private boolean imminentDeath; // determines if the ghoomba is about to die
+    private boolean hitEdge = false; // initialize value for hitEdge. Determines whether the ghoomba
+                                     // has hit the edge
+
     /**
      * Initializes values and images for the ghoomba
      */
@@ -31,37 +32,39 @@ public class Ghoomba extends MovingEnemies
         imageChangeTime = 5;
         imageChangeDelayCount = 0;
     }
-    
+
     /**
-     * Calls the necessary methods to move the ghoomba, animate it and decide whether or not it has been hit
+     * Calls the necessary methods to move the ghoomba, animate it and decide whether or not it has
+     * been hit
      */
-    public void act() 
+    public void act()
     {
-        if (moveable)moveGhoomba();
+        if (moveable)
+            moveGhoomba();
         switchImage();
-    }  
+    }
 
     /**
      * Will move the ghoomba and turn it around if it hits a brick
      */
     public void moveGhoomba()
     {
-        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
+        if (getOneObjectAtOffset(getImage().getWidth() / 2 + 1, 0, Brick.class) != null)
         {
             move(-2);
             hitEdge = true;
         }
-        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Brick.class)!= null)
+        if (getOneObjectAtOffset(-getImage().getWidth() / 2 - 1, 0, Brick.class) != null)
         {
             move(2);
             hitEdge = false;
         }
-        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, LongBrick.class)!= null)
+        if (getOneObjectAtOffset(getImage().getWidth() / 2 + 1, 0, LongBrick.class) != null)
         {
             move(-2);
             hitEdge = true;
         }
-        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, LongBrick.class)!= null)
+        if (getOneObjectAtOffset(-getImage().getWidth() / 2 - 1, 0, LongBrick.class) != null)
         {
             move(2);
             hitEdge = false;
@@ -75,29 +78,31 @@ public class Ghoomba extends MovingEnemies
             move(-1);
         }
     }
-    
+
     /**
-     * When this method is called, the stability of the ghoomba will be reduced by the damage that the bullet imflicts.
-     * If the stability of the ghoomba is less than or equal to zero, the ghoomba wll be removed.
+     * When this method is called, the stability of the ghoomba will be reduced by the damage that
+     * the bullet imflicts. If the stability of the ghoomba is less than or equal to zero, the
+     * ghoomba wll be removed.
      */
-    public void hit(int damage) 
+    public void hit(int damage)
     {
         stability = stability - damage;
-        if(stability <= 0) 
+        if (stability <= 0)
         {
             getWorld().removeObject(this);
         }
     }
-    
+
     /**
-     * This will animate the ghoomba based on which image it has and whether or not the delay count has reached the change time.
-     * If the delay count has not reached the change time, the delay count will tick up.
+     * This will animate the ghoomba based on which image it has and whether or not the delay count
+     * has reached the change time. If the delay count has not reached the change time, the delay
+     * count will tick up.
      */
     public void switchImage()
     {
-        if(imageChangeDelayCount >= imageChangeTime)
+        if (imageChangeDelayCount >= imageChangeTime)
         {
-            if(getImage() == imageL)
+            if (getImage() == imageL)
             {
                 setImage(imageR);
                 imageChangeDelayCount = 0;

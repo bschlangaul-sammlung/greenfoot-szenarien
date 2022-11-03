@@ -1,54 +1,57 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * A bullet that marioG shoots at enemies to kill them.
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class FriendlyBullet extends Actor
 {
-    private int damage = 1; //defines how much damage the bullet does to enemies
-    private boolean left; //defines whether the bullet should move left or right
-    private boolean directionSet = false; //defines whether or not the bullet direction has been set or not
-    private boolean imminentDeath = false; //determines whether or not to kill the bullet
+    private int damage = 1; // defines how much damage the bullet does to enemies
+    private boolean left; // defines whether the bullet should move left or right
+    private boolean directionSet = false; // defines whether or not the bullet direction has been
+                                          // set or not
+    private boolean imminentDeath = false; // determines whether or not to kill the bullet
     public int gravity;
-    
+
     /**
-     * This will call the methods that move and remove the bullet, as well as set the direction for the bullet once.
+     * This will call the methods that move and remove the bullet, as well as set the direction for
+     * the bullet once.
      */
-    public void act() 
+    public void act()
     {
         if (directionSet == false)
         {
             setDirection();
         }
         if (!imminentDeath)
-        moveBullet();
-        
+            moveBullet();
+
         checkCollision();
-        
+
     }
-    
+
     /**
-     * This will set the direction for the bullet based on mario's direction when the bullet was shot
+     * This will set the direction for the bullet based on mario's direction when the bullet was
+     * shot
      */
     private void setDirection()
     {
-        SWorld sWorld = (SWorld)getWorld();
+        SWorld sWorld = (SWorld) getWorld();
         if (sWorld.marioL == true)
         {
             left = true;
         }
-        if(sWorld.marioL == false)
+        if (sWorld.marioL == false)
         {
             left = false;
         }
         directionSet = true;
     }
-        
+
     /**
      * This will move the Bullet based on the original direction that marioG was facing
      */
@@ -57,28 +60,28 @@ public class FriendlyBullet extends Actor
         if (isTouching(Ground.class) || isTouching(LongBrick.class) || isTouching(LongBrick.class))
         {
             gravity = 8;
-            setLocation(getX(),getY() - 10);
+            setLocation(getX(), getY() - 10);
         }
         else
         {
-            
+
             gravity--;
         }
-        setLocation(getX(),getY()-gravity);
-        if(left == true)
+        setLocation(getX(), getY() - gravity);
+        if (left == true)
         {
             move(-8);
         }
-        if(left == false)
+        if (left == false)
         {
             move(8);
         }
     }
-    
+
     /**
      * When called, this will check if the bullet is colliding with any enemies or terrain objects.
-     * If the bullet hits an enemy, it will damage the enemy and remove the bullet.
-     * If the bullet hits a terrain object, it will remove the bullet.
+     * If the bullet hits an enemy, it will damage the enemy and remove the bullet. If the bullet
+     * hits a terrain object, it will remove the bullet.
      */
     public void checkCollision()
     {
@@ -95,66 +98,66 @@ public class FriendlyBullet extends Actor
         Cannon c = (Cannon) getOneIntersectingObject(Cannon.class);
         VerPlatform vp = (VerPlatform) getOneIntersectingObject(VerPlatform.class);
         HorPlatform hp = (HorPlatform) getOneIntersectingObject(HorPlatform.class);
-        if(g != null)
+        if (g != null)
         {
             g.hit(damage);
             imminentDeath = true;
         }
-        if(f != null)
+        if (f != null)
         {
             f.hit(damage);
             imminentDeath = true;
         }
-        if(h != null)
+        if (h != null)
         {
             h.hit(damage);
             imminentDeath = true;
         }
-        if(k != null)
+        if (k != null)
         {
             k.hit(damage);
             imminentDeath = true;
         }
-        if(m != null)
+        if (m != null)
         {
             m.hit(damage);
             imminentDeath = true;
         }
-        if(b != null)
+        if (b != null)
         {
             b.hit(damage);
             imminentDeath = true;
         }
-        if(br != null)
+        if (br != null)
         {
             getWorld().removeObject(this);
             return;
         }
-        if(bl != null)
+        if (bl != null)
         {
             getWorld().removeObject(this);
             return;
         }
         // if(lb != null)
         // {
-            // imminentDeath = true;
+        // imminentDeath = true;
         // }
-        if(p != null)
+        if (p != null)
         {
             getWorld().removeObject(this);
             return;
         }
-        if(c != null)
+        if (c != null)
         {
             getWorld().removeObject(this);
             return;
         }
-        if(hp != null)
+        if (hp != null)
         {
             getWorld().removeObject(this);
             return;
         }
-        if(vp != null)
+        if (vp != null)
         {
             getWorld().removeObject(this);
             return;
@@ -164,6 +167,6 @@ public class FriendlyBullet extends Actor
             StatE.kills++;
             getWorld().removeObject(this);
         }
-        
+
     }
 }

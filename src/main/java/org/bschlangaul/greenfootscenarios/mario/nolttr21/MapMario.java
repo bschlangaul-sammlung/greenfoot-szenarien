@@ -1,16 +1,16 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class MapMario here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class MapMario extends AllMarios
 {
-    
+
 
     public static boolean doKey = false;
     public static boolean alreadyKey = false;
@@ -30,6 +30,7 @@ public class MapMario extends AllMarios
     public boolean onTheMove = false;
     public int level;
     public int wait = -5;
+
     public MapMario()
     {
 
@@ -37,18 +38,18 @@ public class MapMario extends AllMarios
     }
 
     /**
-     * Act - do whatever the MapMario wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the MapMario wants to do. This method is called whenever the 'Act' or 'Run'
+     * button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
         delay--;
         time++;
-        if(delay == 20 && doKey && !alreadyKey)
+        if (delay == 20 && doKey && !alreadyKey)
         {
-            getWorld().addObject(new Key(),getX(),getY()+Greenfoot.getRandomNumber(50));
+            getWorld().addObject(new Key(), getX(), getY() + Greenfoot.getRandomNumber(50));
             Greenfoot.delay(20);
-            getWorld().addObject(new Key(),getX()+Greenfoot.getRandomNumber(50),getY());
+            getWorld().addObject(new Key(), getX() + Greenfoot.getRandomNumber(50), getY());
             Greenfoot.delay(100);
             delay = 50;
             alreadyKey = true;
@@ -80,46 +81,70 @@ public class MapMario extends AllMarios
 
         if (goingUp)
         {
-            setLocation(getX(),getY()-3);
+            setLocation(getX(), getY() - 3);
             wait--;
-            
+
         }
 
         if (goingDown)
         {
-            setLocation(getX(),getY()+3);
+            setLocation(getX(), getY() + 3);
             wait--;
-            
+
         }
 
         if (goingLeft)
         {
-            setLocation(getX()-3,getY());
+            setLocation(getX() - 3, getY());
             wait--;
-            
+
         }
 
         if (goingRight)
         {
-            setLocation(getX()+3,getY());
+            setLocation(getX() + 3, getY());
             wait--;
-            
+
         }
-        
+
         if (Greenfoot.isKeyDown("enter"))
         {
             Greenfoot.delay(10);
             switch (level)
             {
-                case 1:Greenfoot.playSound(characterName + "go.mp3");Greenfoot.setWorld(new MyWorld());Map.map.stop();break;
-                case 2:Greenfoot.playSound(characterName + "go.mp3");Greenfoot.setWorld(new WorldTwo());Map.map.stop();break;
-                case 3:Greenfoot.playSound(characterName + "castle.mp3");Greenfoot.setWorld(new Tower());Map.map.stop();break;
-                case 4:Greenfoot.playSound(characterName + "go.mp3");Greenfoot.setWorld(new WorldThree());Map.map.stop();break;
-                case 5:Greenfoot.playSound(characterName + "castle.mp3");Greenfoot.setWorld(new Fortress());Map.map.stop();break;
-                case 6:Greenfoot.playSound(characterName + "castle.mp3");Greenfoot.setWorld(new Airship());Map.map.stop();break;
+                case 1:
+                    Greenfoot.playSound(characterName + "go.mp3");
+                    Greenfoot.setWorld(new MyWorld());
+                    Map.map.stop();
+                    break;
+                case 2:
+                    Greenfoot.playSound(characterName + "go.mp3");
+                    Greenfoot.setWorld(new WorldTwo());
+                    Map.map.stop();
+                    break;
+                case 3:
+                    Greenfoot.playSound(characterName + "castle.mp3");
+                    Greenfoot.setWorld(new Tower());
+                    Map.map.stop();
+                    break;
+                case 4:
+                    Greenfoot.playSound(characterName + "go.mp3");
+                    Greenfoot.setWorld(new WorldThree());
+                    Map.map.stop();
+                    break;
+                case 5:
+                    Greenfoot.playSound(characterName + "castle.mp3");
+                    Greenfoot.setWorld(new Fortress());
+                    Map.map.stop();
+                    break;
+                case 6:
+                    Greenfoot.playSound(characterName + "castle.mp3");
+                    Greenfoot.setWorld(new Airship());
+                    Map.map.stop();
+                    break;
             }
         }
-        
+
         if (goingRight || goingLeft || goingUp || goingDown)
         {
             if (time % 10 == 0)
@@ -135,11 +160,11 @@ public class MapMario extends AllMarios
 
         // if (getObjectsInRange(5,Worlds.class) != null && wait < 0)
         // {
-            
+
         // }
-        
-        
-        Actor Worlds = getOneObjectAtOffset(0,0,Worlds.class);
+
+
+        Actor Worlds = getOneObjectAtOffset(0, 0, Worlds.class);
         if (Worlds != null && wait < 0)
         {
             goingUp = false;
@@ -148,19 +173,19 @@ public class MapMario extends AllMarios
             goingRight = false;
             onTheMove = false;
             if (Worlds != null)
-            setLocation(Worlds.getX(),Worlds.getY());
+                setLocation(Worlds.getX(), Worlds.getY());
             wait = 10;
-            
+
             setImage(characterName + "map0.png");
             if (Worlds instanceof One)
             {
                 level = 1;
-                
+
             }
             else if (Worlds instanceof Two)
             {
                 level = 2;
-                
+
             }
             else if (Worlds instanceof F)
             {
@@ -184,9 +209,9 @@ public class MapMario extends AllMarios
             }
         }
 
-        
-        
-    }  
 
-   
+
+    }
+
+
 }

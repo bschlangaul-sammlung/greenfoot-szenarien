@@ -1,12 +1,12 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
 /**
  * Platforms, ground and holes
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 29, 2015)
  */
 public class MyWorld extends SWorld
@@ -16,19 +16,20 @@ public class MyWorld extends SWorld
     public static boolean flag = false;
     static GreenfootSound theme = new GreenfootSound("1.mp3");
     static GreenfootSound start = new GreenfootSound("Stage.wav");
+
     /**
      * Constructor for objects of class MyWorld.
-     * 
+     *
      */
     public MyWorld()
-    {    
-        super(700, 400, 1, 6350,401);
+    {
+        super(700, 400, 1, 6350, 401);
         justInit = true;
         StatT.time = 0;
         StatE.kills = 0;
 
         WorldN.world = 1;
-        addObject(new Intro1(), 350,200);
+        addObject(new Intro1(), 350, 200);
         maxX = 6350;
         // setBackground("dsjkh.mod");
         GreenfootImage bg = new GreenfootImage("mariobackground.jpg");
@@ -40,19 +41,19 @@ public class MyWorld extends SWorld
             theme.playLoop();
         }
         rebuildWorld();
-        
-        
-        if(!start.isPlaying())
+
+
+        if (!start.isPlaying())
         {
             start.play();
         }
 
         prepare();
     }
-    
+
     /**
-     * When called, removes all objects in the world and rebuilds it.
-     * If lives are less than 0, the world is set to the game over world.
+     * When called, removes all objects in the world and rebuilds it. If lives are less than 0, the
+     * world is set to the game over world.
      */
     public void rebuildWorld()
     {
@@ -60,29 +61,29 @@ public class MyWorld extends SWorld
         // Greenfoot.start();
         // if (lives < 0)
         // {
-            // stopMusic();
-            // Greenfoot.setWorld(new GameOver());
+        // stopMusic();
+        // Greenfoot.setWorld(new GameOver());
         // }
 
         // ammunition = 0;
         // addObject(new LongBrick(),0,200);
-       
+
         // Greenfoot.delay(17);
         buildWorld();
-        
+
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+
         Intro1 intro = new Intro1();
-        addObject(intro, 350,200);
-        intro.setLocation(351,200);
-        
-        addObject(new Black(),6000,-200);
+        addObject(intro, 350, 200);
+        intro.setLocation(351, 200);
+
+        addObject(new Black(), 6000, -200);
     }
 
     /**
@@ -146,8 +147,8 @@ public class MyWorld extends SWorld
                 addMainActor(new MarioS(), 50, 200, 250, 300);
             }
         }
-        
-        addObject(new LongBrick(),0,125);
+
+        addObject(new LongBrick(), 0, 125);
         addObject(new Ground(), 100, 390);
         addObject(new Ground(), 300, 390);
         addObject(new Ghoomba(), 182, 358);
@@ -222,7 +223,7 @@ public class MyWorld extends SWorld
         addObject(new HammerBro(), 2000, 358);
 
         addObject(new Brick(), 2185, 358);
-    }    
+    }
 
     /**
      * Adds all the objects for area four of the world
@@ -270,7 +271,7 @@ public class MyWorld extends SWorld
         addObject(new Brick(), 3000, 326);
         addObject(new Brick(), 3000, 294);
 
-        addObject (new HammerBro(), 3100, 358);
+        addObject(new HammerBro(), 3100, 358);
 
         addObject(new Brick(), 3485, 358);
         addObject(new Brick(), 3485, 326);
@@ -278,7 +279,7 @@ public class MyWorld extends SWorld
         addObject(new Brick(), 3453, 358);
         addObject(new Brick(), 3453, 326);
         addObject(new Brick(), 3421, 358);
-    } 
+    }
 
     /**
      * Adds all the objects for area five of the world
@@ -327,8 +328,10 @@ public class MyWorld extends SWorld
         addObject(new Brick(), 4129, 160);
         addObject(new Brick(), 4129, 192);
 
-        if (!flag)addObject(new CheckPointD(), 4129, 254);
-        else addObject(new CheckPointA(), 4129, 254);
+        if (!flag)
+            addObject(new CheckPointD(), 4129, 254);
+        else
+            addObject(new CheckPointA(), 4129, 254);
 
         addObject(new Ghoomba(), 4200, 358);
         addObject(new Ghoomba(), 4300, 358);
@@ -339,7 +342,7 @@ public class MyWorld extends SWorld
         addObject(new Brick(), 4529, 358);
         addObject(new Brick(), 4529, 326);
         addObject(new Brick(), 4529, 294);
-    }    
+    }
 
     /**
      * Adds all the objects for area six of the world
@@ -360,10 +363,10 @@ public class MyWorld extends SWorld
         addObject(new Brick(), 5450, 358);
         addObject(new Brick(), 5450, 326);
         addObject(new FireFlower(), 5450, 298);
-    }  
+    }
 
     /**
-     * 
+     *
      * Adds all the objects for the last area of the world
      */
     private void endingArea()
@@ -379,18 +382,18 @@ public class MyWorld extends SWorld
     }
 
     /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
+     * Prepare the world for the start of the program. That is: create the initial objects and add
+     * them to the world.
      */
     private void prepare()
     {
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
     }
 
     public int MaxX()
@@ -401,7 +404,7 @@ public class MyWorld extends SWorld
     public void stopped()
     {
         // getObjects(Bowser.class).get(1);
-        
+
     }
 
     public void hitwall1()

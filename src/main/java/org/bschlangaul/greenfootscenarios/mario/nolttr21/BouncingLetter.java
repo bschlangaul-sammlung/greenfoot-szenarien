@@ -1,11 +1,11 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * A BouncingLetter that bounces
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class BouncingLetter extends Text
@@ -16,16 +16,17 @@ public class BouncingLetter extends Text
     public boolean launch = false;
     public int maxBounce = Greenfoot.getRandomNumber(10) + 1;
     public int yValue;
+
     public BouncingLetter(int size, String letter, greenfoot.Color text, int y)
     {
-        setImage(new GreenfootImage(letter,size,text,new Color(0,0,0,0)));
+        setImage(new GreenfootImage(letter, size, text, new Color(0, 0, 0, 0)));
         yValue = y;
     }
-    
+
     /**
      * makes it bounce
      */
-    public void act() 
+    public void act()
     {
         if (Greenfoot.getRandomNumber(10) == 0)
         {
@@ -35,27 +36,27 @@ public class BouncingLetter extends Text
         {
             if (!up)
             {
-                gravity ++;
-                setLocation(getX(),getY() + gravity);
+                gravity++;
+                setLocation(getX(), getY() + gravity);
                 if (getY() > yValue)
                 {
-                    setLocation(getX(),yValue);
+                    setLocation(getX(), yValue);
                     up = true;
                     bounce++;
                 }
             }
 
-            if (up && bounce < maxBounce) 
+            if (up && bounce < maxBounce)
             {
                 gravity--;
                 gravity--;
-                setLocation(getX(),getY() - gravity);
+                setLocation(getX(), getY() - gravity);
                 if (gravity < 0)
                 {
                     up = false;
 
                 }
             }
-        }    
+        }
     }
 }

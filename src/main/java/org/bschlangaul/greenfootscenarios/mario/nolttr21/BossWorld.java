@@ -1,54 +1,55 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * The final world with Bowser
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class BossWorld extends SWorld
 {
     private ScoreBoard scoreBoard;
     private BowserLife bowserLife;
-    
-    private int hits; //defines how much health to display for bowser
+
+    private int hits; // defines how much health to display for bowser
     static GreenfootSound win = new GreenfootSound("Down.mp3");
     static GreenfootSound music = new GreenfootSound("boom.mp3");
     LongBrick l1 = new LongBrick();
     LongBrick l2 = new LongBrick();
     LongBrick l3 = new LongBrick();
     public boolean gameWon = false;
+
     /**
      * Calls the methods to construct BossWorld
      */
     public BossWorld()
-    {    
-        super(700, 400, 1, 700); 
+    {
+        super(700, 400, 1, 700);
         // setPaintOrder(LiveText.class,LiveImage.class,Intro5.class);
         buildWorld();
-        
-        
+
+
         gameWon = false;
         addScoreboards();
         updateScoreboard();
         hits = 40;
         // Bowser.fall = false;
         WorldN.world = 5;
-        if(!music.isPlaying())
+        if (!music.isPlaying())
         {
             music.playLoop();
         }
         SWorld.time = 100;
         LiveImage liveimage = new LiveImage();
-        addObject(liveimage,245,271);
+        addObject(liveimage, 245, 271);
         LiveText livetext = new LiveText();
-        addObject(livetext,369,289);
-        liveimage.setLocation(313,268);
-        liveimage.setLocation(292,269);
-        livetext.setLocation(368,270);
-        addObject(new Intro5(), 350,200);
+        addObject(livetext, 369, 289);
+        liveimage.setLocation(313, 268);
+        liveimage.setLocation(292, 269);
+        livetext.setLocation(368, 270);
+        addObject(new Intro5(), 350, 200);
     }
 
     /**
@@ -76,9 +77,9 @@ public class BossWorld extends SWorld
         {
             addMainActor(new MarioS(), 50, 0, 250, 300);
         }
-        addObject(new Block(),32,275);
-        addObject(new Block(),64,275);
-        
+        addObject(new Block(), 32, 275);
+        addObject(new Block(), 64, 275);
+
         addObject(new Bowser(), 600, 329);
 
         addObject(new LongBrick(), -80, 390);
@@ -123,7 +124,7 @@ public class BossWorld extends SWorld
         // liveimage.setLocation(292,269);
         // livetext.setLocation(368,270);
         // addObject(new Intro5(), 350,200);
-        
+
     }
 
     /**
@@ -159,28 +160,28 @@ public class BossWorld extends SWorld
      */
     public void gameWon()
     {
-        if(getObjects(Dummy.class).isEmpty())
+        if (getObjects(Dummy.class).isEmpty())
         {
             // music.stop();
-            
+
             // removeObject(bowserLife);
             // // removeObjects(getObjects(Bowser.class));
             // // Greenfoot.delay(500);
             // if(!win.isPlaying())
             // {
-                // // Greenfoot.playSound("almost.mp3");
-                // // addObject(new Dummy(),650,0);
+            // // Greenfoot.playSound("almost.mp3");
+            // // addObject(new Dummy(),650,0);
             // }
         }
         removeObject(l1);
         // Greenfoot.delay(5);
         removeObject(l2);
-        
+
         // Greenfoot.delay(5);
         removeObject(l3);
         Bowser.part++;
     }
-    
+
     /**
      * Adds the scoreboards to the world
      */
@@ -189,14 +190,14 @@ public class BossWorld extends SWorld
         scoreBoard = new ScoreBoard();
         addObject(scoreBoard, 30, 15, false);
         // scoreBoard.updateScore(lives, ammunition);
-        addObject(new P2(),650,375);
+        addObject(new P2(), 650, 375);
         bowserLife = new BowserLife();
         addObject(bowserLife, 350, 15, false);
         bowserLife.updateScore(hits);
         removeObject(bowserLife);
-        
+
     }
-    
+
     public void play()
     {
         // win.play();

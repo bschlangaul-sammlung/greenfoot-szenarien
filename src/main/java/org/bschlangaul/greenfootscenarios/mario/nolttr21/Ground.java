@@ -4,8 +4,8 @@ import greenfoot.*;
 
 /**
  * A surface for mario to move on
- * 
- * @author (Dylan Powell and Sean Eastley) 
+ *
+ * @author (Dylan Powell and Sean Eastley)
  * @version (January 21, 2015)
  */
 public class Ground extends Solid
@@ -18,7 +18,7 @@ public class Ground extends Solid
         GreenfootImage platform = new GreenfootImage("Ground.png");
         GreenfootImage image = new GreenfootImage(600, platform.getHeight());
         int w = platform.getWidth();
-        for(int offset=0; offset<600; offset+=w)
+        for (int offset = 0; offset < 600; offset += w)
         {
             image.drawImage(platform, offset, 0);
         }

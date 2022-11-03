@@ -1,31 +1,31 @@
 package org.bschlangaul.greenfootscenarios.mario.nolttr21;
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * decoration
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class MapAirship extends Decoration
 {
     public int pastX;
+
     /**
-     * Act - do whatever the MapAirship wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the MapAirship wants to do. This method is called whenever the 'Act' or
+     * 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
-        try 
+        try
         {
             Ball ball = getWorld().getObjects(Ball.class).get(0);
             if (ball != null)
             {
-                setLocation(ball.getX(),ball.getY());
+                setLocation(ball.getX(), ball.getY());
             }
-        }
-        catch (IndexOutOfBoundsException e)
+        } catch (IndexOutOfBoundsException e)
         {
 
         }
@@ -44,5 +44,5 @@ public class MapAirship extends Decoration
         }
 
         pastX = getX();
-    }    
+    }
 }
