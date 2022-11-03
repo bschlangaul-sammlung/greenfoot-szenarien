@@ -15,10 +15,10 @@ mvn formatter:format
   * [GameDevLeo](https://www.greenfoot.org/scenarios/30012):
     sehr schöne Grafik, Game-Over nicht implementiert.
 - [Pong](https://de.wikipedia.org/wiki/Pong)
-  * [paggos_ichor](https://www.greenfoot.org/scenarios/1493):
+  * [Paggos_Ichor](https://www.greenfoot.org/scenarios/1493):
     schwarz weiß, mit Maussteuerung
 - [Snake](https://de.wikipedia.org/wiki/Snake_(Computerspiel))
-  * [rccookie](https://www.greenfoot.org/scenarios/24962):
+  * [RcCookie ](https://www.greenfoot.org/scenarios/24962):
     minimalistisch, von Student der RWTH Aachen, https://github.com/rc-cookie
 - [Super Mario Bros.](https://de.wikipedia.org/wiki/Super_Mario_Bros.)
   * [nolttr21](https://www.greenfoot.org/scenarios/22540): sehr umfangreich

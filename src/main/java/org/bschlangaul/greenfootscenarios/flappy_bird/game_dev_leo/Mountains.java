@@ -2,7 +2,6 @@ package org.bschlangaul.greenfootscenarios.flappy_bird.game_dev_leo;
 
 import greenfoot.*;
 
-
 public class Mountains extends Background
 {
     public Mountains()
