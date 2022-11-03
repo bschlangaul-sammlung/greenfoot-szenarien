@@ -33,4 +33,4 @@ done
 
 
 _delete_file_by_extension ctxt
-_delete_file_by_extension java
+_delete_file_by_extension class
