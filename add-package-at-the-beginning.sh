@@ -1,6 +1,5 @@
 #! /bin/sh
 
-
 FOLDER="$1"
 PACKAGE_SUBFOLDER="$2"
 
@@ -20,9 +19,7 @@ PACKAGE="package org.bschlangaul.greenfootscenarios.${PACKAGE_SUBFOLDER};
 "
 
 for FILE in $(find ${FOLDER} -iname "*.java"); do
-
   echo "$FILE"
   CONTENT="$(cat "$FILE")"
-
   echo "$PACKAGE$CONTENT" > "$FILE"
 done
