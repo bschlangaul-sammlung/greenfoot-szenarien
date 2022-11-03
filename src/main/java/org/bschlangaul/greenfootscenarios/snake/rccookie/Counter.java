@@ -1,6 +1,6 @@
 package org.bschlangaul.greenfootscenarios.snake.rccookie;
 
-import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * A Counter class that allows you to display a numerical value on screen.
