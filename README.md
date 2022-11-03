@@ -11,6 +11,9 @@ mvn formatter:format
 
 # Ausgewählte Spieleklassiker
 
+- [Flappy Bird](https://de.wikipedia.org/wiki/Flappy_Bird)
+  * [GameDevLeo](https://www.greenfoot.org/scenarios/30012):
+    sehr schöne Grafik, Game-Over nicht implementiert.
 - [Pong](https://de.wikipedia.org/wiki/Pong)
   * [paggos_ichor](https://www.greenfoot.org/scenarios/1493):
     schwarz weiß, mit Maussteuerung
