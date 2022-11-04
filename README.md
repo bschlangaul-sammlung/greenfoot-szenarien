@@ -11,6 +11,9 @@ mvn formatter:format
 
 # Ausgewählte Spieleklassiker
 
+- [Angry Birds](https://de.wikipedia.org/wiki/Angry_Birds)
+  * [M.Z.](https://www.greenfoot.org/scenarios/26230):
+    Drei Level, klein geschriebene Klassennamen
 - [Flappy Bird](https://de.wikipedia.org/wiki/Flappy_Bird)
   * [GameDevLeo](https://www.greenfoot.org/scenarios/30012):
     sehr schöne Grafik, Game-Over nicht implementiert.

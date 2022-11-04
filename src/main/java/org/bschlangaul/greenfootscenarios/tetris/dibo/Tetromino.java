@@ -141,7 +141,8 @@ public abstract class Tetromino extends Actor
         TetrisWorld world = TetrisWorld.getWorld();
         blocks: for (int i = 0; i < 4; i++)
         {
-            java.util.List<Block> list = world.getObjectsAt(b[i].getX() - 1, b[i].getY(), Block.class);
+            java.util.List<Block> list =
+                            world.getObjectsAt(b[i].getX() - 1, b[i].getY(), Block.class);
             if (list.size() == 0)
             {
                 continue;
@@ -182,7 +183,8 @@ public abstract class Tetromino extends Actor
         TetrisWorld world = TetrisWorld.getWorld();
         blocks: for (int i = 0; i < 4; i++)
         {
-            java.util.List<Block> list = world.getObjectsAt(b[i].getX() + 1, b[i].getY(), Block.class);
+            java.util.List<Block> list =
+                            world.getObjectsAt(b[i].getX() + 1, b[i].getY(), Block.class);
             if (list.size() == 0)
             {
                 continue;
