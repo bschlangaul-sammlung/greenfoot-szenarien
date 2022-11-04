@@ -14,6 +14,10 @@ mvn formatter:format
 - [Angry Birds](https://de.wikipedia.org/wiki/Angry_Birds)
   * [M.Z.](https://www.greenfoot.org/scenarios/26230):
     Drei Level, klein geschriebene Klassennamen
+  * kein Source-Code [jackgan](https://www.greenfoot.org/scenarios/3618)
+    Angry Birds Frogger
+  * nicht empfehlenswert [RuchikaSwami](https://www.greenfoot.org/scenarios/13105):
+    kompiliert nicht in neueren Greenfoot-Versionen, häßliche Sprites
 - [Flappy Bird](https://de.wikipedia.org/wiki/Flappy_Bird)
   * [GameDevLeo](https://www.greenfoot.org/scenarios/30012):
     sehr schöne Grafik, Game-Over nicht implementiert.
